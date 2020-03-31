@@ -1,0 +1,7 @@
+{
+  "extends": "eslint-config-egg",
+  "rules":{
+    // 不写分号
+    "semi":["error","never"]
+  }
+}
