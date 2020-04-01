@@ -14,6 +14,10 @@
                 </span>
                 <el-input placeholder='密码'></el-input>
             </el-form-item>
+            <el-form-item props="passwd">
+                <el-input placeholder='验证码'></el-input>
+                <img @click="updateCaptcha" :src="captchaUrl" alt="">
+            </el-form-item>
         </el-form>
     </div>
 </template>
@@ -23,7 +27,13 @@
         layout:'login',
         data(){
             return{
-                rules:[]
+                rules:[],
+                captchaUrl:"/api/captcha?_t="+new Date().getTime()
+            }
+        },
+        methods:{
+            updateCaptcha(){
+                this.captchaUrl = "/api/captcha?_t="+new Date().getTime()
             }
         }
     }
