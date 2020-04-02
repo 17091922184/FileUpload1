@@ -31,3 +31,12 @@ $ npm stop
 
 
 [egg]: https://eggjs.org
+
+{
+    code:0,
+    data:{
+
+    },
+    message:
+    <!-- 具体报错信息 -->
+}

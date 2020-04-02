@@ -13,7 +13,7 @@
 </script>
 
 <style lang="stylus">
-.login-containner
+.login-container
     width:100%
     min-height 100%
     .login-form
@@ -27,12 +27,15 @@
         img 
           width 200px
     .captcha-container
+        width 340px
+        position relative
         .captcha
           position absolute
           right -110px
+
           img 
             width 90px
-            height 50px
+            height 40px
             cursor pointer
                 
 </style>
