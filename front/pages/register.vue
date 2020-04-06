@@ -2,7 +2,9 @@
     <div class="login-container">
         <el-form class="login-form" label-width="100px" :model="form" :rules="rules" ref="registerForm">
             <div class="title-container">
-                <img src="/logo.png" alt="">
+                <!-- <img src="/logo.png" alt=""> -->
+                <div class="title-font">文件上传系统</div>
+
             </div>
             <el-form-item prop="email" label="邮箱">
                 <el-input v-model="form.email" placeholder="请输入邮箱"></el-input>
@@ -28,7 +30,7 @@
                 <el-input type="password" v-model="form.repasswd" placeholder="请再次输入密码"></el-input>
             </el-form-item>
 
-            <el-form-item prop="repasswd" label="">
+            <el-form-item  label="">
                 <el-button type="primary" @click.native.prevent="handleRegister">注册</el-button>
             </el-form-item>
         </el-form>
@@ -79,7 +81,7 @@ import md5 from 'md5'
         data(){
             return{
                 form:{
-                    email:"997415019@qq.com",
+                    email:"txs_qiuxiang@163.com",
                     nickname:"天玄",
                     passwd:"12345678",
                     repasswd:"12345678",

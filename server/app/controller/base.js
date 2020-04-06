@@ -2,7 +2,7 @@
 
 const {Controller} = require('egg')
 class BaseController extends Controller{
-    succexx(data){
+    success(data){
         this.ctx.body = {
             code:0,
             data
