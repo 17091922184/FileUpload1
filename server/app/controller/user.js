@@ -51,7 +51,6 @@ class UserController extends BaseController{
         console.log({ email, passwd, captcha, nickname })
 
 
-
         //验证码校验
 
         if (captcha.toUpperCase() !== ctx.session.captcha.toUpperCase()) {
@@ -82,6 +81,9 @@ class UserController extends BaseController{
         const {ctx} = this
         //还不知道是哪个邮件。需要从token里读取
         //有的接口需要从token里读取，有的不需要
+        const {email} = ctx.state
+        const user = await this.checkEmail(email)
+        this.success(user)
 
     }
 }
